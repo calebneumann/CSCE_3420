@@ -10,7 +10,12 @@ async function displayText(){
         method: "GET" // default, so we can ignore
     })
     var exam = await response.json();
-    document.getElementById("textField").textContent = JSON.stringify(exam, undefined, 2);
+    
+    var poop = JSON.stringify(exam, undefined, 2);
+    var obj = JSON.parse(poop);
+    var values = Object.values(obj);
+
+    document.getElementById("textField").textContent = obj.value;
     text.style.display = "block";
 
 }
