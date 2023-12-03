@@ -181,6 +181,7 @@ function displayUpdate(text, color='green') {
 
 
 function displayText(){
-    var text = document.getElementById("textField");
+    var text = "yo yo yo this is some text!!!"
+    document.getElementById("textField").innerHTML = text;
     text.style.display = "block";
 }
