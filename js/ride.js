@@ -189,7 +189,7 @@ async function displayText(){
         method: "GET" // default, so we can ignore
     })
     var exam = await response.json();
-    document.getElementById("textField").innerHTML = exam;
+    document.getElementById("textField").textContent = JSON.stringify(exam, undefined, 2);
     text.style.display = "block";
 
 }
