@@ -18,6 +18,13 @@ html, body, #main, #map {
     background: transparent;
 }
 
+.info-chuck{
+    width: 275px;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+}
+
 #request {
     position: relative;
     background: #fcc1d4 none repeat scroll 0 0;
