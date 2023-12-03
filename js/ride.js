@@ -180,15 +180,16 @@ function displayUpdate(text, color='green') {
 }
 
 
-function displayText(){
+async function displayText(){
     var text = "yo yo yo this is some text!!!"
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
 
-    var response = fetch("https://api.chucknorris.io/jokes/random", {
+    var response = await fetch("https://api.chucknorris.io/jokes/random", {
         method: "GET" // default, so we can ignore
     })
-    document.getElementById("textField").innerHTML = response;
+    var exam = await response.json();
+    document.getElementById("textField").innerHTML = exam;
     text.style.display = "block";
 
 }
