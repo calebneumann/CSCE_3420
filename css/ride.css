@@ -19,11 +19,10 @@ html, body, #main, #map {
 }
 
 .info-chuck{
-    position: fixed;
-    top: auto;
-    left: auto;
-    right: auto;
-    
+    position: absolute;
+    top: 100%;
+    left: 25%;
+
     width: 275px;
     top: 10px;
     z-index: 100;
