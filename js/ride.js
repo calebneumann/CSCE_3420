@@ -185,7 +185,7 @@ async function displayText(){
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
 
-    var response = await fetch("https://api.chucknorris.io/jokes/random", {
+    var response = await fetch("https://api.api-ninjas.com/v1/chucknorris", {
         method: "GET" // default, so we can ignore
     })
     var exam = await response.json();
