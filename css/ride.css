@@ -14,31 +14,12 @@ html, body, #main, #map {
     background: transparent;
 }
 
-.info-chuck {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 100;
-    width: 275px;
-    background: transparent;
-}
-
 .info .panel-body {
     background: transparent;
 }
 
 #request {
-    float: right;
-    background: #fcc1d4 none repeat scroll 0 0;
-    color: #000;
-    border-color: #000;
-    border-radius: 5px;
-    text-align: center;
-    width: 135px;
-}
-
-#request-chuck {
-    float: right;
+    position: relative;
     background: #fcc1d4 none repeat scroll 0 0;
     color: #000;
     border-color: #000;
