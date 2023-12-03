@@ -196,7 +196,7 @@ input[type=text], input[type=password], input[type=email] {
     border: none;
     border-bottom: 2px solid white;
     box-sizing: border-box;
-    background:black;
+    background: transparent;
     outline: none;
 
     font-family: "fairplex-wide";
@@ -271,7 +271,15 @@ input[type=submit]:hover {
 }
 
 
-
+.jokes{
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+}
 
 
 /* Typography */
