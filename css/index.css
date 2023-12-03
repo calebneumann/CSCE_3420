@@ -107,7 +107,7 @@ body{
 
   background-image: url(../images/background.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center bottom;
 
   font-family: "fairplex-wide";
@@ -196,7 +196,7 @@ input[type=text], input[type=password], input[type=email] {
     border: none;
     border-bottom: 2px solid white;
     box-sizing: border-box;
-    background: transparent;
+    background:black;
     outline: none;
 
     font-family: "fairplex-wide";
