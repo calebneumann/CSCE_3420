@@ -23,7 +23,7 @@ html, body, #main, #map {
     top: 100%;
     left: 25%;
 
-    width: 275px;
+    width:fit-content;
     top: 10px;
     z-index: 100;
 }

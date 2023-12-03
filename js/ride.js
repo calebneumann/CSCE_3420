@@ -179,3 +179,8 @@ function displayUpdate(text, color='green') {
     $('#updates').prepend($(`<li style="background-color:${color}">${text}</li>`));
 }
 
+
+function displayText(){
+    var text = document.getElementById("textField");
+    text.style.display = "block";
+}
