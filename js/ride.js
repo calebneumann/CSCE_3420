@@ -184,4 +184,11 @@ function displayText(){
     var text = "yo yo yo this is some text!!!"
     document.getElementById("textField").innerHTML = text;
     text.style.display = "block";
+
+
+    fetch("https://api.chucknorris.io/jokes/random")
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+    document.getElementById("response").innerHTML = json;
+
 }
