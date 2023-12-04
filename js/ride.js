@@ -190,7 +190,7 @@ async function displayText(){
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
 
-    var response = await fetch('https://api.weather.gov/points/${latitude},${longitude}', {
+    var response = await fetch(`https://api.weather.gov/points/${latitude},${longitude}`, {
         method: "GET" // default, so we can ignore
     })
     var exam = await response.json();
