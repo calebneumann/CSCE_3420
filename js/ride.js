@@ -196,18 +196,19 @@ async function displayText(){
     })
     var exam = await response.json();
     
+    var forecastString = JSON.stringify(exam.properties.relativeLocation.properties.city, undefined, 2);
+    var objForecast = JSON.parse(forecastString);
+    objForecast = 'City: ' + objForecast;
+    document.getElementById("city").textContent = objForecast;
+    objForecast = '\0';
+
+
     var forecast = await fetch(exam.properties.forecast, {
         method: "GET" // default, so we can ignore
     })
     var result = await forecast.json();
 
-    forecastString = JSON.stringify(result, undefined, 2);
-    var objForecast = JSON.parse(forecastString);
-    objForecast = 'Temperature = ' + objForecast + ' F';
-    document.getElementById("response").textContent = objForecast;
-    objForecast = '\0';
-
-    forecastString = JSON.stringify(result.properties.periods[0].temperature, undefined, 2);
+    var forecastString = JSON.stringify(result.properties.periods[0].temperature, undefined, 2);
     var objForecast = JSON.parse(forecastString);
     objForecast = 'Temperature = ' + objForecast + ' F';
     document.getElementById("temperature").textContent = objForecast;
