@@ -4,9 +4,8 @@ var WildRydes = window.WildRydes || {};
 WildRydes.map = WildRydes.map || {};
 let map;
 
-var latitude;
-var longitude;
-
+var latitude = 33.74589581532424;
+var longitude = -96.57449490391815;
 
 (function rideScopeWrapper($) {
     var authToken;
