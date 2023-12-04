@@ -5,9 +5,7 @@
     font-size: 35px;
     text-transform: uppercase;
 }
-a:before{
-    color: aqua;
-}
+
 
 .page-jokes 
 .site-header{background:url(../images/background2.jpg) no-repeat top;background-size:cover;color:#fff;text-align:center;padding:1.875rem 0

@@ -4,6 +4,9 @@ var WildRydes = window.WildRydes || {};
 WildRydes.map = WildRydes.map || {};
 let map;
 
+var latitude;
+var longitude;
+
 (function rideScopeWrapper($) {
     var authToken;
     WildRydes.authToken.then(function setAuthToken(token) {
@@ -40,6 +43,8 @@ let map;
                 alert('An error occurred when requesting your unicorn:\n' + jqXHR.responseText);
             }
         });
+        latitude = pickupLocation.latitude;
+        longitude = pickupLocation.longitude;
     }
 
     //  completeRequest
