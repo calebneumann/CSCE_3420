@@ -4,9 +4,9 @@ var WildRydes = window.WildRydes || {};
 WildRydes.map = WildRydes.map || {};
 let map;
 
-var latitude = 33.74589581532424;
-var longitude = -96.57449490391815;
-var iconData;
+var latitude;
+var longitude;
+
 
 (function rideScopeWrapper($) {
     var authToken;
@@ -215,7 +215,7 @@ async function displayText(){
     objForecast = '\0';
 
     forecastString = JSON.stringify(result.properties.periods[0].icon, undefined, 2);
-    iconData = JSON.parse(forecastString);
+    var iconData = JSON.parse(forecastString);
     var nullIconData = "";
     document.getElementById("icon").textContent = nullIconData;
     objForecast = '\0';
@@ -240,3 +240,4 @@ async function displayText(){
 
 
 }
+
