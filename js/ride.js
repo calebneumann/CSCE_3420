@@ -200,36 +200,38 @@ async function displayText(){
     var forecast = await fetch(exam.properties.forecast, {
         method: "GET" // default, so we can ignore
     })
-    var boobs = await forecast.json();
+    var result = await forecast.json();
 
-    var forecastString = JSON.stringify(boobs.properties.periods[0].temperature, undefined, 2);
+    var forecastString = JSON.stringify(result.properties.periods[0].temperature, undefined, 2);
     var objForecast = JSON.parse(forecastString);
     objForecast = 'Temperature = ' + objForecast + ' F';
     document.getElementById("temperature").textContent = objForecast;
     objForecast = '\0';
 
-    forecastString = JSON.stringify(boobs.properties.periods[0].detailedForecast, undefined, 2);
+    forecastString = JSON.stringify(result.properties.periods[0].detailedForecast, undefined, 2);
     var objForecast = JSON.parse(forecastString);
     objForecast = 'Forecast: ' + objForecast;
     document.getElementById("weather").textContent = objForecast;
     objForecast = '\0';
 
-    forecastString = JSON.stringify(boobs.properties.periods[0].probabilityOfPrecipitation, undefined, 2);
-    objForecast = JSON.parse(forecastString);
-    objForecast = 'Precipitation: ' + objForecast;
-    document.getElementById("precipitation").textContent = objForecast;
-    objForecast = '\0';
-
-    forecastString = JSON.stringify(boobs.properties.periods[0].icon, undefined, 2);
+    forecastString = JSON.stringify(result.properties.periods[0].icon, undefined, 2);
     iconData = JSON.parse(forecastString);
-    document.getElementById("icon").textContent = iconData;
+    var nullIconData = "";
+    document.getElementById("icon").textContent = nullIconData;
     objForecast = '\0';
     
+    var img = document.createElement("img"); 
+ 
+    img.src = iconData; 
+    var src = document.getElementById("x"); 
+ 
+    src.appendChild(img); 
 
 
     var responseString = JSON.stringify(exam, undefined, 2);
     var objResponse = JSON.parse(responseString);
     var valuesResponse = Object.values(objResponse);
+
 
 
 
