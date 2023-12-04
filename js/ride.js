@@ -200,7 +200,7 @@ async function displayText(){
     var obj = JSON.parse(poop);
     var values = Object.values(obj);
 
-    document.getElementById("textField").textContent = JSON.stringify(values, undefined, 2);
+    document.getElementById("textField").textContent = values.forcast;
     text.style.display = "block";
 
 
