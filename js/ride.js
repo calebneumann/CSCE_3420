@@ -189,7 +189,8 @@ async function displayText(){
     var text = "yo yo yo this is some text!!!"
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
-
+    document.getElementById("latitude").textContent = latitude;
+    document.getElementById("longitude").textContent = longitude;
     var response = await fetch(`https://api.weather.gov/points/${latitude},${longitude}`, {
         method: "GET" // default, so we can ignore
     })
@@ -201,5 +202,6 @@ async function displayText(){
 
     document.getElementById("textField").textContent = obj.forecast;
     text.style.display = "block";
+
 
 }
