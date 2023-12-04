@@ -199,7 +199,7 @@ async function displayText(){
     var obj = JSON.parse(poop);
     var values = Object.values(obj);
 
-    document.getElementById("textField").textContent = obj.value;
+    document.getElementById("textField").textContent = obj.forecast;
     text.style.display = "block";
 
 }
