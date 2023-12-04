@@ -201,6 +201,11 @@ async function displayText(){
     })
     var result = await forecast.json();
 
+    var examString = JSON.stringify(exam, undefined, 2);
+    var objExam = JSON.parse(examString);
+    document.getElementById("response").textContent = objExam;
+    objForecast = '\0';
+
     var forecastString = JSON.stringify(result.properties.periods[0].temperature, undefined, 2);
     var objForecast = JSON.parse(forecastString);
     objForecast = 'Temperature = ' + objForecast + ' F';
