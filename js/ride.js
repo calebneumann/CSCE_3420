@@ -213,28 +213,18 @@ async function displayText(){
     document.getElementById("weather").textContent = objForecast;
     objForecast = '\0';
 
-    var fullResponse = JSON.stringify(result, undefined, 2);
-    var responsee = JSON.parse(fullResponse);
-    document.getElementById("fullResponse").textContent = responsee;
-    responsee = '\0';
-
-
     forecastString = JSON.stringify(result.properties.periods[0].icon, undefined, 2);
     var iconData = JSON.parse(forecastString);
     var nullIconData = "";
     document.getElementById("icon").textContent = nullIconData;
     objForecast = '\0';
-
-
+    
     var img = document.createElement("img"); 
  
     img.src = iconData; 
     var src = document.getElementById("x"); 
  
     src.appendChild(img); 
-
-
-
 
 
     var responseString = JSON.stringify(exam, undefined, 2);
