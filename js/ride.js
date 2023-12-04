@@ -4,8 +4,9 @@ var WildRydes = window.WildRydes || {};
 WildRydes.map = WildRydes.map || {};
 let map;
 
-var latitude;
-var longitude;
+var latitude = 33.74589581532424;
+var longitude = -96.57449490391815;
+var iconData;
 
 (function rideScopeWrapper($) {
     var authToken;
@@ -196,11 +197,43 @@ async function displayText(){
     })
     var exam = await response.json();
     
-    var poop = JSON.stringify(exam, undefined, 2);
-    var obj = JSON.parse(poop);
-    var values = Object.values(obj);
+    var forecast = await fetch(exam.properties.forecast, {
+        method: "GET" // default, so we can ignore
+    })
+    var boobs = await forecast.json();
 
-    document.getElementById("textField").textContent = values.forcast;
+    var forecastString = JSON.stringify(boobs.properties.periods[0].temperature, undefined, 2);
+    var objForecast = JSON.parse(forecastString);
+    objForecast = 'Temperature = ' + objForecast + ' F';
+    document.getElementById("temperature").textContent = objForecast;
+    objForecast = '\0';
+
+    forecastString = JSON.stringify(boobs.properties.periods[0].detailedForecast, undefined, 2);
+    var objForecast = JSON.parse(forecastString);
+    objForecast = 'Forecast: ' + objForecast;
+    document.getElementById("weather").textContent = objForecast;
+    objForecast = '\0';
+
+    forecastString = JSON.stringify(boobs.properties.periods[0].probabilityOfPrecipitation, undefined, 2);
+    objForecast = JSON.parse(forecastString);
+    objForecast = 'Precipitation: ' + objForecast;
+    document.getElementById("precipitation").textContent = objForecast;
+    objForecast = '\0';
+
+    forecastString = JSON.stringify(boobs.properties.periods[0].icon, undefined, 2);
+    iconData = JSON.parse(forecastString);
+    document.getElementById("icon").textContent = iconData;
+    objForecast = '\0';
+    
+
+
+    var responseString = JSON.stringify(exam, undefined, 2);
+    var objResponse = JSON.parse(responseString);
+    var valuesResponse = Object.values(objResponse);
+
+
+
+    document.getElementById("textField").textContent = objForecast;
     text.style.display = "block";
 
 
