@@ -65,7 +65,7 @@ var longitude = -96.57449490391815;
         animateArrival(function animateCallback() {
             displayUpdate(unicorn.Name + ' has arrived. Giddy up!', unicorn.Color);
             WildRydes.map.unsetLocation();
-
+            displayText();
             $('#request').prop('disabled', 'disabled');
             $('#request').text('Set Pickup');
         });
