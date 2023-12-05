@@ -227,9 +227,10 @@ async function displayText(){
 
     forecastString = JSON.stringify(result.properties.periods[0].icon, undefined, 2);
     var iconData = JSON.parse(forecastString);
-    document.getElementById("icon").contentType.img = iconData;
+    document.getElementById('icon').innerHtml = '<img src="' +iconData+'"/>';
     objForecast = '\0';
     
+
 
     text.style.display = "block";
 
