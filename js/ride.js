@@ -238,7 +238,7 @@ async function displayText(){
     
 
 
-    src.appendChild(img);
+    src.childNodes(img);
 
     text.style.display = "block";
 
