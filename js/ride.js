@@ -235,9 +235,10 @@ async function displayText(){
     img.src = iconData; 
     var src = document.getElementById("x"); 
  
-    src.appendChild(img);
-
     src.removeChild(img);
+
+
+    src.appendChild(img);
 
     text.style.display = "block";
 
