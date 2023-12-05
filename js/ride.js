@@ -199,10 +199,10 @@ async function displayText(){
     var cityString = JSON.stringify(exam.properties.relativeLocation.properties.city, undefined, 2); //gets city
     var objCity = JSON.parse(cityString);
 
-    var stateString = JSON.stringify(exam.properties.relativeLocation.properties.state, undefined, 2); //gets city
+    var stateString = JSON.stringify(exam.properties.relativeLocation.properties.state, undefined, 2); //gets state
     var objState = JSON.parse(stateString);
 
-    objForecast = 'City: ' + objcity + ', ' + objState;
+    objForecast = 'City: ' + objCity + ', ' + objState;
     document.getElementById("city").textContent = objForecast;
     objForecast = '\0';
 
