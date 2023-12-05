@@ -186,6 +186,7 @@ function displayUpdate(text, color='green') {
 
 
 async function displayText(){
+    src.remove();
     var text = "yo yo yo this is some text!!!"
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
