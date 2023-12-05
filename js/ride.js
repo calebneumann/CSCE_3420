@@ -235,7 +235,6 @@ async function displayText(){
     img.src = iconData; 
     var src = document.getElementById("x"); 
  
-    src.removeChild(src.img);
 
 
     src.appendChild(img);
