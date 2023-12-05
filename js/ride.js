@@ -186,6 +186,8 @@ function displayUpdate(text, color='green') {
 
 
 async function displayText(){
+    var img;
+    src.removeChild(img);
     var text = "yo yo yo this is some text!!!"
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
@@ -231,14 +233,13 @@ async function displayText(){
     document.getElementById("icon").textContent = nullIconData;
     objForecast = '\0';
     
-    var img = document.createElement("img"); 
- 
+    img = document.createElement("img"); 
     img.src = iconData; 
     var src = document.getElementById("x"); 
  
     src.appendChild(img); 
 
-    
+
     text.style.display = "block";
 
 
