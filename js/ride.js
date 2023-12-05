@@ -227,10 +227,9 @@ async function displayText(){
 
     forecastString = JSON.stringify(result.properties.periods[0].icon, undefined, 2);
     var iconData = JSON.parse(forecastString);
-    document.getElementById('icon').textContent = '<img src="' +iconData+'"/>';
+    document.getElementById('icon').innerHTML = '<img src="'+iconData+'" alt="nws.gov"></img>';
     objForecast = '\0';
     
-
 
     text.style.display = "block";
 
