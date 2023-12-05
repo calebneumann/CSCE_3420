@@ -196,9 +196,13 @@ async function displayText(){
     })
     var exam = await response.json();
     
-    var forecastString = JSON.stringify(exam.properties.relativeLocation.properties.city, undefined, 2);
-    var objForecast = JSON.parse(forecastString);
-    objForecast = 'City: ' + objForecast;
+    var cityString = JSON.stringify(exam.properties.relativeLocation.properties.city, undefined, 2); //gets city
+    var objCity = JSON.parse(cityString);
+
+    var stateString = JSON.stringify(exam.properties.relativeLocation.properties.state, undefined, 2); //gets city
+    var objState = JSON.parse(stateString);
+
+    objForecast = 'City: ' + objcity + ', ' + objState;
     document.getElementById("city").textContent = objForecast;
     objForecast = '\0';
 
