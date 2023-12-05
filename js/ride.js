@@ -231,14 +231,8 @@ async function displayText(){
     document.getElementById("icon").textContent = nullIconData;
     objForecast = '\0';
     
-    img = document.createElement("img"); 
-    img.src = iconData; 
-    var src = document.getElementById("x"); 
- 
-    src.removeChild(src.img);
+    document.getElementById("x").src=iconData; 
 
-
-    src.appendChild(img);
 
     text.style.display = "block";
 
