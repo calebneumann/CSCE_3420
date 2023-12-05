@@ -239,14 +239,6 @@ async function displayText(){
     src.appendChild(img); 
 
 
-    var responseString = JSON.stringify(exam, undefined, 2);
-    var objResponse = JSON.parse(responseString);
-    var valuesResponse = Object.values(objResponse);
-
-
-
-
-    document.getElementById("textField").textContent = objForecast;
     text.style.display = "block";
 
 
