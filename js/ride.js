@@ -236,8 +236,8 @@ async function displayText(){
     var src = document.getElementById("x"); 
  
     src.appendChild(img);
-    src.replaceChild(img, img); 
 
+    src.removeChild(img);
 
     text.style.display = "block";
 
