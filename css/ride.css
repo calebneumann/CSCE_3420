@@ -21,11 +21,32 @@ html, body, #main, #map {
 .info-chuck{
     position: absolute;
     top: 100%;
-    left: 25%;
+    left: 50%;
 
-    width:fit-content;
+    width: 450px;
     top: 10px;
+    height:fit-content;
     z-index: 100;
+    padding: 10px;
+}
+
+.panel-chuck{
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+img{
+    border-radius: 5px;
+}
+
+.weatherTitle{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+.weatherInfo{
+    padding-top: 20px;
+    font-weight: 700;
 }
 
 #request {

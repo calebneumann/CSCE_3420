@@ -106,7 +106,7 @@ var longitude = -96.57449490391815;
 
             WildRydes.marker  = L.marker([loc.coords.latitude, loc.coords.longitude]).addTo(map);
             var myIcon = L.icon({
-                iconUrl: 'images/unicorn-icon.png',
+                iconUrl: 'images/unicornchuck.png',
                 iconSize: [25, 25],
                 iconAnchor: [22, 24],
                 shadowSize: [25, 25],
@@ -137,7 +137,7 @@ var longitude = -96.57449490391815;
     //      enable the Pickup button and set text to Request Unicorn
     function handlePickupChanged() {
         var requestButton = $('#request');
-        requestButton.text('Request Unicorn');
+        requestButton.text('Request Chuck');
         requestButton.prop('disabled', false);
     }
 
@@ -148,6 +148,7 @@ var longitude = -96.57449490391815;
 
         event.preventDefault();
         requestUnicorn(pickupLocation);
+        removeText();
     }
 
     //  animateArrival
@@ -189,8 +190,7 @@ async function displayText(){
     var text = "yo yo yo this is some text!!!"
     //document.getElementById("textField").innerHTML = text;
     //text.style.display = "block";
-    document.getElementById("latitude").textContent = latitude;
-    document.getElementById("longitude").textContent = longitude;
+
     var response = await fetch(`https://api.weather.gov/points/${latitude},${longitude}`, {
         method: "GET" // default, so we can ignore
     })
@@ -229,6 +229,22 @@ async function displayText(){
     var iconData = JSON.parse(forecastString);
     document.getElementById('icon').innerHTML = '<img src="'+iconData+'" alt="nws.gov"></img>';
     objForecast = '\0';
+    
+
+    text.style.display = "block";
+
+
+}
+
+function removeText(){
+
+    document.getElementById("city").textContent = "";
+
+    document.getElementById("temperature").textContent = "";
+
+    document.getElementById("weather").textContent = "";
+
+    document.getElementById('icon').innerHTML = "";
     
 
     text.style.display = "block";
