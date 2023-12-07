@@ -24,7 +24,7 @@ async function displayText(){
         document.getElementById("textField").textContent = obj.value + " 0-8";
     }
     else if  (rand == 9) {
-        document.getElementById("textField").innerHTML = '<div>HAHA GET RICKROLLED</div><iframe width="280" height="157" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SXWbX1Ftj_y2tdpO" title="YouTube video player" frameborder="0" allow="accelerometer; &autoplay = 1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+        document.getElementById("textField").innerHTML = '<div>HAHA GET RICKROLLED</div><iframe width="280" height="157" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SXWbX1Ftj_y2tdpO&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 
     }
 
