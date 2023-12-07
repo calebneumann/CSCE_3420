@@ -15,7 +15,19 @@ async function displayText(){
     var obj = JSON.parse(poop);
     var values = Object.values(obj);
 
-    document.getElementById("textField").textContent = obj.value;
+            
+    var el = document.getElementById('content');
+    var content;
+    var rand = Math.floor(Math.random() * 10);
+
+    if  (rand >= 0 && rand < 9) {
+        document.getElementById("textField").textContent = obj.value + " 0-8";
+    }
+    else if  (rand == 9) {
+        document.getElementById("textField").innerHTML = '<div>HAHA GET RICKROLLED</div><iframe width="280" height="157" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SXWbX1Ftj_y2tdpO" title="YouTube video player" frameborder="0" allow="accelerometer; &autoplay = 1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+
+    }
+
     text.style.display = "block";
 
 }
