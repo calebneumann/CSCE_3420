@@ -56,3 +56,8 @@ button{
 img{
     border-radius: 100%;
 }
+
+.secret{
+    color:white;
+    font-size: 20;
+}
