@@ -21,7 +21,7 @@ async function displayText(){
     var rand = Math.floor(Math.random() * 10);
 
     if  (rand >= 0 && rand < 9) {
-        document.getElementById("textField").textContent = obj.value + " 0-8";
+        document.getElementById("textField").textContent = obj.value;
     }
     else if  (rand == 9) {
         //document.getElementById("textField").innerHTML = '<div>HAHA GET RICKROLLED</div><iframe width="280" height="157" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SXWbX1Ftj_y2tdpO&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
